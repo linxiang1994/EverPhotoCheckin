@@ -59,7 +59,7 @@ func pushMessage(ok bool, desp string) {
 	}
 
 	const (
-		_textSuccess = "时光相册签到成功通知"
+		_textSuccess = "帅气的林老师，您的时光相册签到成功"
 		_textFailure = "时光相册签到失败通知"
 	)
 	var err error
@@ -98,7 +98,7 @@ func main() {
 		log.Fatal("【时光相册】" + desp)
 	}
 
-	desp = fmt.Sprintf("你已连续签到%d天，累计获得空间%s，明天可白嫖%s，请继续保持(￣▽￣)",
+	desp = fmt.Sprintf("帅气的林老师，你已连续签到%d天，累计获得空间%s，明天可白嫖%s，请继续保持(￣▽￣)",
 		cr.Continuity, cr.TotalReward, cr.TomorrowReward)
 	pushMessage(true, desp)
 	log.Print("【时光相册】" + desp)
